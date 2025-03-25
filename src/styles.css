@@ -4,6 +4,11 @@
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
+@plugin "@iconify/tailwind4"{
+  prefix: "iconify";
+  scale: 1.2;
+ }
+
 @theme {
   --font-display: "Satoshi", "sans-serif";
   --breakpoint-3xl: 120rem;
@@ -16,4 +21,12 @@
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   /* ... */
+}
+
+.light-theme {
+  @apply text-gray-500 hover:bg-gray-100 focus:ring-gray-200;
+}
+
+.dark-theme {
+  @apply text-gray-400 hover:bg-gray-700 focus:ring-gray-700;
 }
